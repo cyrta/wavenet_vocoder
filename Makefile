@@ -17,4 +17,8 @@ run:
 
 
 data_arctic_pre: 
-	python preprocess.py cmu_arctic /data/cmu_arctic /data/cmu_arctic_pre
+	python3 preprocess.py cmu_arctic /data/cmu_arctic /data/cmu_arctic_pre
+
+
+train:
+	python3 train.py --data-root=/data/cmu_arctic_pre/  --hparams="cin_channels=-1,gin_channels=-1"

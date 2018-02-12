@@ -41,6 +41,12 @@ from os.path import join, expanduser
 import random
 import librosa.display
 from matplotlib import pyplot as plt
+import matplotlib
+if os.environ.get('DISPLAY','') == '':
+    print('no display found. Using non-interactive Agg backend')
+    matplotlib.use('Agg')
+    plt.switch_backend('agg')
+
 import sys
 import os
 

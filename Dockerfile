@@ -6,7 +6,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         vim \
         less \
         git \
-        python-tk
+        python3-tk
 
  COPY requirements.txt .
  RUN pip install wheel setuptools && \
@@ -15,6 +15,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
      pip install torchvision
 
 
+
+RUN useradd -r -u 1006  cyrta
+USER cyrta
 
 WORKDIR /workspace
 CMD ["bash"]
