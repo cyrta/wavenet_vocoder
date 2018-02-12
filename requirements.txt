@@ -1,0 +1,14 @@
+numpy
+scipy
+scikit-learn
+keras
+tensorboardX
+matplotlib
+docopt
+tqdm
+nose
+pysptk >= 0.1.9
+librosa
+lws
+nnmnkwii >= 0.0.11
+deepvoice3_pytorch >= 0.0.2
