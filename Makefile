@@ -1,6 +1,6 @@
 
 
-all: download build train 
+all: build run 
 
 
 download: download_arctic
@@ -13,7 +13,7 @@ build:
 	docker build -t wavenet-pytorch -f Dockerfile .
 
 run:
-	nvidia-docker run --rm -v $$(pwd):/workspace -v "/mnt/moria/datasets/speech/":/data -it wavenet-pytorch bash
+	nvidia-docker run --rm -v $$(pwd):/workspace -v $$(pwd)/data:/data -it wavenet-pytorch bash
 
 
 data_arctic_pre: 
